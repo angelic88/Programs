@@ -6,15 +6,22 @@
 <body>
 
 <h1>Programs</h1>
-<p>This is an exercise in rewriting my C++ programs in JavaScript. Why? So that everyone can use it in a broswer.</p>
+<p>This is an exercise in rewriting my C++ programs in JavaScript. Why? So that everyone can use it in a browser.</p>
 
-<h2>Add Two Numbers</h2>
+<h2>Sum of Two Numbers</h2>
 <input type="number" id="num1" placeholder="Enter first number">
 <input type="number" id="num2" placeholder="Enter second number">
 <button onclick="calulateSum()">Calculate Sum</button>
 <p>Result: <span id="result"></span></p>
 
 
+<h2>Difference of Two Numbers</h2>
+<input type="number" id="rnum1" placeholder="Enter first number">
+<input type="number" id="rnum2" placeholder="Enter second number">
+<button onclick="calulateDifference()">Calculate Difference</button>
+<p>Result: <span id="rresult"></span></p>
+
+	
 <h2>Product of Two Numbers</h2>
 <input type="number" id="number1" placeholder="Enter first number">
 <input type="number" id="number2" placeholder="Enter second number">
@@ -41,6 +48,20 @@ parseFloat (document.getElementById('num2').value);
 		
 		// Display the result
 		document.getElementById('result').textContent = sum;
+	}
+
+	function calulateDifference() {
+		// Get the values from the input fields
+		let rnum1 =
+parseFloat (document.getElementById('rnum1').value);
+		let rnum2 = 
+parseFloat (document.getElementById('rnum2').value);
+
+		// Calculate the Difference
+		let sum = rnum1 - rnum2;
+		
+		// Display the result
+		document.getElementById('rresult').textContent = difference;
 	}
 	
 	function calulateProduct() {
@@ -72,4 +93,5 @@ parseFloat (document.getElementById('lnum2').value);
 	}
 	</script>
 </body>
+
 </html>
