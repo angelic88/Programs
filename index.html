@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Liyanna's Programs</title>
+</head>
+<body>
+
+<h1>Programs</h1>
+<p>This is an exercise in rewriting my C++ programs in JavaScript. Why? So that everyone can use it in a broswer.</p>
+
+<h2>Add Two Numbers</h2>
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+<button onclick="calulateSum()">Calculate Sum</button>
+<p>Result: <span id="result"></span></p>
+
+
+<h2>Product of Two Numbers</h2>
+<input type="number" id="number1" placeholder="Enter first number">
+<input type="number" id="number2" placeholder="Enter second number">
+<button onclick="calulateProduct()">Calculate Product</button>
+<p>Result: <span id="presult"></span></p>
+
+
+<h2>Division of Two Numbers</h2>
+<input type="number" id="lnum1" placeholder="Enter first number">
+<input type="number" id="lnum2" placeholder="Enter second number">
+<button onclick="calulateDivision()">Calculate Division</button>
+<p>Result: <span id="lresult"></span></p>
+
+<script>
+	function calulateSum() {
+		// Get the values from the input fields
+		let num1 =
+parseFloat (document.getElementById('num1').value);
+		let num2 = 
+parseFloat (document.getElementById('num2').value);
+
+		// Calculate the Sum
+		let sum = num1 + num2;
+		
+		// Display the result
+		document.getElementById('result').textContent = sum;
+	}
+	
+	function calulateProduct() {
+		// Get the values from the input fields
+		let number1 =
+parseFloat (document.getElementById('number1').value);
+		let number2 = 
+parseFloat (document.getElementById('number2').value);
+
+		// Calculate the Product
+		let product = number1 * number2;
+		
+		// Display the result
+		document.getElementById('presult').textContent = product;
+	}
+	
+	function calulateDivision() {
+		// Get the values from the input fields
+		let lnum1 =
+parseFloat (document.getElementById('lnum1').value);
+		let lnum2 = 
+parseFloat (document.getElementById('lnum2').value);
+
+		// Calculate the Division
+		let division = lnum1 / lnum2;
+		
+		// Display the result
+		document.getElementById('lresult').textContent = division;
+	}
+	</script>
+</body>
+</html>
