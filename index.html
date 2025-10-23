@@ -35,7 +35,14 @@
 <button onclick="calulateDivision()">Calculate Division</button>
 <p>Result: <span id="lresult"></span></p>
 
+
+<h2>Largest Number</h2>
+<input type="number" id="snum1" placeholder="Enter first number">
+<input type="number" id="snum2" placeholder="Enter second number">
+<button onclick="calulateLargest()">Calculate Larest</button>
+<p>Result: <span id="sresult"></span></p>
 <script>
+	
 	function calulateSum() {
 		// Get the values from the input fields
 		let num1 =
@@ -91,8 +98,30 @@ parseFloat (document.getElementById('lnum2').value);
 		// Display the result
 		document.getElementById('lresult').textContent = division;
 	}
+
+		function calulateLargest() {
+		// Get the values from the input fields
+		let snum1 =
+parseFloat (document.getElementById('snum1').value);
+		let snum2 = 
+parseFloat (document.getElementById('snum2').value);
+
+		// Calculate the Largest
+		let largest;
+			if (snum1 > snum2) {
+				largest = snum1;
+		    }else if (num2 > num1) {
+    			largest = num2;
+  			} else {
+    			largest = "Both are equal";
+  			}
+		
+		// Display the result
+		document.getElementById('sresult').textContent = largest;
+	}
 	</script>
 </body>
 
 </html>
+
 
