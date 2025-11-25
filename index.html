@@ -142,14 +142,6 @@
   <p>Result: <span id="sresult"></span></p>
 </div>
 
-<div class="program">
-  <h2>BMI Calculator ⚖️</h2>
-  <input type="number" id="lbs" placeholder="Enter your weight in pounds">
-  <input type="number" id="inches" placeholder="Enter your height in inches">
-  <button onclick="calculateBMI()">Calculate BMI</button>
-  <p>Result: <span id="bmiResult"></span></p>
-</div>
-
 <footer>© 2025 Liyanna Muschamp 💚</footer>
 
 <script>
@@ -192,24 +184,9 @@
     } else {
       document.getElementById('sresult').textContent = "Both are equal";
     }
-  }
-
-  function calculateBMI() {
-    let lbs = parseFloat(document.getElementById('lbs').value);
-    let inches = parseFloat(document.getElementById('inches').value);
-    if (!lbs || !inches) {
-      document.getElementById('bmiResult').textContent = "Please enter valid numbers.";
-      return;
-    }
-    let BMI = (lbs * 703) / (inches * inches);
-    let category;
-    if (BMI < 18.5) category = "Underweight";
-    else if (BMI <= 24.9) category = "Healthy";
-    else if (BMI <= 29.9) category = "Overweight";
-    else category = "Obese";
-    document.getElementById('bmiResult').textContent = BMI.toFixed(2) + " (" + category + ")";
-  }
+  
 </script>
 
 </body>
 </html>
+
